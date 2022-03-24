@@ -34,5 +34,5 @@ A web application processing a personal collection of movies and series. Each us
 * Added Checkstyle
 
 ## Author
-* Simeon Yachev - ScaleFocus
-    * [simeon.yachev@scalefocus.com]()
+* Simeon Yachev
+    * [simeon.yachev@gmail.com]()
