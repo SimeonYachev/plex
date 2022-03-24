@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+jwt:
+  secretKey: secretkeysecretkeysecretkeysecretkeysecretkey
+  tokenPrefix: "Bearer "
+  tokenExpiration: 1800000
+  authorizationHeader: Authorization
+
+spring:
+  profiles:
+    active: dev
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: com.scalefocus.java.simeonyachev.db.SQLDialect
+

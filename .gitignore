@@ -1,0 +1,32 @@
+/target/
+/logs/
+src/main/db_files
+/db_files/
+/node_modules/
+src/main/resources/static/built/
+package-lock.json
+!.mvn/wrapper/maven-wrapper.jar
+Jenkinsfile
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/

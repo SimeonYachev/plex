@@ -1,0 +1,22 @@
+server:
+  port: 8086
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource-mysql:
+    jdbc-url: jdbc:mysql://localhost:3306/plex_sy?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root
+    jpa:
+      hibernate:
+        ddl-auto: update
+  datasource-sqlite:
+    jdbc-url: jdbc:sqlite:/var/db/3.db
+    username: root
+    password: root
+    jpa:
+      hibernate:
+        ddl-auto: update
+    driver-class-name: org.sqlite.JDBC

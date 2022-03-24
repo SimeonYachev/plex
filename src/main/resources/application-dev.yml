@@ -1,0 +1,24 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource-mysql:
+    jdbc-url: jdbc:mysql://localhost:3306/plex
+    username: plexuser
+    password: password
+    jpa:
+      hibernate:
+        ddl-auto: update
+  datasource-sqlite:
+    jdbc-url: jdbc:sqlite:C:/Users/simeon.yachev/IdeaProjects/java-springboot-bootstrap-seed/src/main/db_files/uploaded_db.db
+    username: root
+    password: root
+    jpa:
+      hibernate:
+        ddl-auto: none
+    driver-class-name: org.sqlite.JDBC
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 400MB
+      max-request-size: 400MB
