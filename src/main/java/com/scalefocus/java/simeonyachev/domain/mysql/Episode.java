@@ -1,16 +1,26 @@
 package com.scalefocus.java.simeonyachev.domain.mysql;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.Data;
 
-import javax.persistence.*;
-import java.util.Objects;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Data
 @Entity
 @Table(name = "episodes")
 public class Episode extends Multimedia {
 
+    @Column(name = "number")
     private Integer number;
+
+    @Column(name = "audio")
     private String audio;
+
+    @Column(name = "subtitles")
     private String subtitles;
 
     @ManyToOne
@@ -28,56 +38,6 @@ public class Episode extends Multimedia {
         this.audio = builder.audio;
         this.subtitles = builder.subtitles;
         this.season = builder.season;
-    }
-
-    public Integer getNumber() {
-        return number;
-    }
-
-    public void setNumber(Integer number) {
-        this.number = number;
-    }
-
-    public String getAudio() {
-        return audio;
-    }
-
-    public void setAudio(String audio) {
-        this.audio = audio;
-    }
-
-    public String getSubtitles() {
-        return subtitles;
-    }
-
-    public void setSubtitles(String subtitles) {
-        this.subtitles = subtitles;
-    }
-
-    public Season getSeason() {
-        return season;
-    }
-
-    public void setSeason(Season season) {
-        this.season = season;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof Episode)) {
-            return false;
-        }
-        Episode episode = (Episode) obj;
-        return Objects.equals(number, episode.number) && Objects.equals(audio, episode.audio)
-                && Objects.equals(subtitles, episode.subtitles) && Objects.equals(season, episode.season);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(number, audio, subtitles, season);
     }
 
     public static class EpisodeBuilder extends MultimediaBuilder<Episode, EpisodeBuilder> {

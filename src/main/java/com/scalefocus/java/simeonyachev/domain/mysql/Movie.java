@@ -1,14 +1,23 @@
 package com.scalefocus.java.simeonyachev.domain.mysql;
 
-import javax.persistence.*;
-import java.util.Objects;
+import lombok.Data;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Data
 @Entity
 @Table(name = "movies")
 public class Movie extends Multimedia {
 
+    @Column(name = "genres")
     private String genres;
+
+    @Column(name = "audio")
     private String audio;
+
+    @Column(name = "subtitles")
     private String subtitles;
 
     public Movie() {
@@ -20,48 +29,6 @@ public class Movie extends Multimedia {
         this.genres = builder.genres;
         this.audio = builder.audio;
         this.subtitles = builder.subtitles;
-    }
-
-    public String getGenres() {
-        return genres;
-    }
-
-    public void setGenres(String genres) {
-        this.genres = genres;
-    }
-
-    public String getAudio() {
-        return audio;
-    }
-
-    public void setAudio(String audio) {
-        this.audio = audio;
-    }
-
-    public String getSubtitles() {
-        return subtitles;
-    }
-
-    public void setSubtitles(String subtitles) {
-        this.subtitles = subtitles;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof Movie)) {
-            return false;
-        }
-        Movie movie = (Movie) obj;
-        return Objects.equals(genres, movie.genres) && Objects.equals(audio, movie.audio)
-                && Objects.equals(subtitles, movie.subtitles);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(genres, audio, subtitles);
     }
 
     public static class MovieBuilder extends MultimediaBuilder<Movie, MovieBuilder> {

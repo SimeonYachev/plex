@@ -25,7 +25,7 @@ public class MigrationServiceImpl implements MigrationService {
     private static final int MOVIE_TYPE = 1;
     private static final int SERIES_TYPE = 2;
     private static final String FILE_PATH =
-            "C:\\Users\\simeon.yachev\\IdeaProjects\\java-springboot-bootstrap-seed\\src\\main\\db_files\\uploaded_db.db";
+            "C:\\Users\\simeon.yachev\\IdeaProjects\\db_files\\uploaded_db.db";
 
     private final MovieMapper movieMapper;
     private final MovieService movieService;

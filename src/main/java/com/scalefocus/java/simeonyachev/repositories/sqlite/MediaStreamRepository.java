@@ -10,6 +10,5 @@ import java.util.Optional;
 
 @Repository
 public interface MediaStreamRepository extends JpaRepository<MediaStream, Integer> {
-    Optional<MediaStream> findByLanguage(String language);
     Optional<Collection<MediaStream>> findAllByMediaItem(MediaItem mediaItem);
 }

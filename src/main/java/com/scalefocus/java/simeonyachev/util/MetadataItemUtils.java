@@ -81,6 +81,6 @@ public class MetadataItemUtils {
     }
 
     public String extractDistinctInfo(String info) {
-        return new HashSet<String>(Arrays.asList(info.split("\\|"))).toString();
+        return new HashSet<>(Arrays.asList(info.split("\\|"))).toString();
     }
 }

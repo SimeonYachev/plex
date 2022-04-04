@@ -2,7 +2,6 @@ package com.scalefocus.java.simeonyachev.controllers;
 
 import com.scalefocus.java.simeonyachev.services.MigrationService;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

@@ -10,7 +10,7 @@ spring:
       hibernate:
         ddl-auto: update
   datasource-sqlite:
-    jdbc-url: jdbc:sqlite:C:/Users/simeon.yachev/IdeaProjects/java-springboot-bootstrap-seed/src/main/db_files/uploaded_db.db
+    jdbc-url: jdbc:sqlite:C:/Users/simeon.yachev/IdeaProjects/db_files/uploaded_db.db
     username: root
     password: root
     jpa:

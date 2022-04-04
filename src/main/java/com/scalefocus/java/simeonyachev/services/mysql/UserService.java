@@ -1,7 +1,6 @@
 package com.scalefocus.java.simeonyachev.services.mysql;
 
 import com.scalefocus.java.simeonyachev.domain.mysql.User;
-import com.scalefocus.java.simeonyachev.exceptions.UserAlreadyRegisteredException;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Collection;

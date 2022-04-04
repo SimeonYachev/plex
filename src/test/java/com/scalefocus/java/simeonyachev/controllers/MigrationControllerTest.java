@@ -55,7 +55,7 @@ class MigrationControllerTest {
 
     @BeforeAll
     static void setMultipartFile() {
-        MULTIPART_FILE = new MockMultipartFile("File", (byte[]) null);
+        MULTIPART_FILE = new MockMultipartFile("file", (byte[]) null);
     }
 
     @Test
