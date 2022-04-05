@@ -13,9 +13,10 @@ import com.scalefocus.java.simeonyachev.util.mappers.SeriesMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -94,10 +95,9 @@ public class MigrationServiceImpl implements MigrationService {
     }
 
     private void uploadFile(MultipartFile file) {
-        File myFile = new File(FILE_PATH);
-        try (FileOutputStream fos = new FileOutputStream(myFile)) {
-            myFile.createNewFile();
-            fos.write(file.getBytes());
+        Path myFile = Paths.get(FILE_PATH);
+        try {
+            Files.write(myFile, file.getBytes());
         } catch (IOException exception) {
             throw new FileUploadFailureException();
         }
